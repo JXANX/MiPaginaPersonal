@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PC Builder</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">PC Builder</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="pages/builder.html">Armar PC</a></li>
+        <li>
+          <a href="pages/guia.html">Guia</a>
+          <ul class="submenu">
+            <li><a href="pages/guia.html#cpu">Procesadores</a></li>
+            <li><a href="pages/guia.html#gpu">Tarjetas de video</a></li>
+            <li><a href="pages/guia.html#ram">Memoria RAM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Aqui pongo mi foto y datos principales -->
+    <section class="perfil">
+      <div class="perfil-foto">
+        <img class="perfil-foto" src="images/Screenshot_2026-03-18-15-46-43-124_com.miui.gallery[1].jpg" alt="">
+      </div>
+      <div class="perfil-info">
+        <h1 class="perfil-nombre">Juan Camilo Castañeda Lopera</h1>
+        <p class="perfil-titulo">Estudiante de Ingeniería de Software — 5to Semestre</p>
+        <p class="perfil-desc">
+          Me apasiona la programación y los videojuegos. Actualmente curso 5to semestre
+          de Ingeniería de Software en la EAM, siempre buscando aprender nuevas tecnologías
+          y construir proyectos que me reten.
+        </p>
+        <div style="margin-top: 8px;">
+          <a href="pages/builder.html" class="btn btn-principal">Armar una PC</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Un poco sobre mi -->
+    <section>
+      <h2 class="titulo-seccion">Sobre mi</h2>
+      <div class="card">
+        <p style="color: var(--texto-suave); font-size: 0.95rem;">
+          Soy Juan Camilo Castañeda Lopera, de Colombia. Actualmente estudio Ingeniería
+          de Software en la EAM Institución Universitaria, cursando mi 5to semestre.
+          Me apasiona la programación y el desarrollo de software, y en mi tiempo libre
+          disfruto jugando videojuegos y estudiando nuevas tecnologías para seguir
+          mejorando mis habilidades.
+        </p>
+      </div>
+    </section>
+
+    <!-- Los proyectos que he hecho -->
+    <section>
+      <h2 class="titulo-seccion">Mis proyectos</h2>
+      <div class="cards-row">
+
+        <article class="card">
+          <h3 class="card-titulo">PC Builder</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem;">
+            Simulador web para armar una PC eligiendo componentes y calculando el precio total.
+            Desarrollado con HTML, CSS y JavaScript.
+          </p>
+          <div style="margin-top: 12px;">
+            <a href="pages/builder.html" class="btn btn-contorno" style="font-size: 0.82rem; padding: 6px 14px;">Ver
+              proyecto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card-titulo">Reproductor de Música</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem;">
+            Reproductor de música web con controles de reproducción, lista de canciones
+            y una interfaz intuitiva. Desarrollado con HTML, CSS y JavaScript.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-titulo">Gestión de Adopción de Mascotas</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem;">
+            Sistema web para gestionar la adopción de mascotas, permitiendo registrar
+            animales disponibles y conectar adoptantes. Desarrollado con HTML, CSS y JavaScript.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>PC Builder</h4>
+        <p>Proyecto - Desarrollo Web</p>
+        <p>EAM Institucion Universitaria</p>
+      </div>
+      <div class="footer-col">
+        <h4>Paginas</h4>
+        <a href="index.html">Inicio</a>
+        <a href="pages/builder.html">Armar PC</a>
+        <a href="pages/guia.html">Guia de componentes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>castanedaloperaj@gmail.com</p>
+        <p>2026</p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>Proyecto - Desarrollo Web | EAM 2026</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

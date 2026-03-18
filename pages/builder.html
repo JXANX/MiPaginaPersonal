@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armar PC - PC Builder</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">PC Builder</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="builder.html" class="active">Armar PC</a></li>
+        <li>
+          <a href="guia.html">Guia</a>
+          <ul class="submenu">
+            <li><a href="guia.html#cpu">Procesadores</a></li>
+            <li><a href="guia.html#gpu">Tarjetas de video</a></li>
+            <li><a href="guia.html#ram">Memoria RAM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="titulo-seccion">Armar PC</h2>
+
+    <!-- La barrita que muestra cuantos componentes van -->
+    <div style="margin-bottom: 24px;">
+      <div class="barra-fondo">
+        <div class="barra-relleno" id="barra" style="width: 0%;"></div>
+      </div>
+      <p class="barra-texto" id="progreso-texto">0 de 7 componentes elegidos</p>
+    </div>
+
+    <!-- Divido la pagina en dos: las opciones y el resumen -->
+    <div class="layout-dos">
+
+      <!-- Aqui van todas las opciones de componentes -->
+      <article>
+
+        <div class="grupo">
+          <h3>Procesador (CPU)</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">Intel Core i3-12100</span>
+              <span class="opcion-spec">4 nucleos / 8 hilos — 3.3 GHz</span>
+              <span class="opcion-precio">$280.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">Intel Core i5-13600K</span>
+              <span class="opcion-spec">14 nucleos / 20 hilos — 3.5 GHz</span>
+              <span class="opcion-precio">$680.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">AMD Ryzen 9 7900X</span>
+              <span class="opcion-spec">12 nucleos / 24 hilos — 4.7 GHz</span>
+              <span class="opcion-precio">$1.400.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Placa madre (Motherboard)</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">ASUS Prime H610M</span>
+              <span class="opcion-spec">Socket LGA1700 — DDR4 — mATX</span>
+              <span class="opcion-precio">$320.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">MSI MAG B760 Tomahawk</span>
+              <span class="opcion-spec">Socket LGA1700 — DDR5 — ATX</span>
+              <span class="opcion-precio">$750.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">ASUS ROG Crosshair X670E</span>
+              <span class="opcion-spec">Socket AM5 — DDR5 — ATX</span>
+              <span class="opcion-precio">$2.100.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Memoria RAM</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">8 GB DDR4 3200 MHz</span>
+              <span class="opcion-spec">1 stick Kingston</span>
+              <span class="opcion-precio">$120.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">16 GB DDR4 3600 MHz</span>
+              <span class="opcion-spec">2x8 GB Corsair Vengeance</span>
+              <span class="opcion-precio">$240.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">32 GB DDR5 5600 MHz</span>
+              <span class="opcion-spec">2x16 GB G.Skill Trident Z5</span>
+              <span class="opcion-precio">$580.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Tarjeta de video (GPU)</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">Intel UHD 730</span>
+              <span class="opcion-spec">Grafica integrada</span>
+              <span class="opcion-precio">Incluida</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">NVIDIA RTX 3060</span>
+              <span class="opcion-spec">12 GB GDDR6</span>
+              <span class="opcion-precio">$1.200.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">NVIDIA RTX 4080</span>
+              <span class="opcion-spec">16 GB GDDR6X</span>
+              <span class="opcion-precio">$4.200.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Almacenamiento</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">SSD SATA 480 GB</span>
+              <span class="opcion-spec">Kingston A400 — 500 MB/s</span>
+              <span class="opcion-precio">$150.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">NVMe SSD 1 TB</span>
+              <span class="opcion-spec">WD Black SN770 — 5000 MB/s</span>
+              <span class="opcion-precio">$350.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">NVMe SSD 2 TB Gen 4</span>
+              <span class="opcion-spec">Samsung 990 Pro — 7450 MB/s</span>
+              <span class="opcion-precio">$700.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Fuente de poder (PSU)</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">EVGA 450W 80+ Bronze</span>
+              <span class="opcion-spec">No modular</span>
+              <span class="opcion-precio">$180.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">Corsair RM750 80+ Gold</span>
+              <span class="opcion-spec">Semi-modular — 750W</span>
+              <span class="opcion-precio">$380.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">Seasonic Prime TX-1000</span>
+              <span class="opcion-spec">80+ Titanium — 1000W</span>
+              <span class="opcion-precio">$920.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h3>Gabinete</h3>
+          <div class="opciones">
+            <div class="opcion">
+              <span class="opcion-nombre">Aerocool CS-1103</span>
+              <span class="opcion-spec">mATX — sin ventanas</span>
+              <span class="opcion-precio">$120.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">Lian Li Lancool 216</span>
+              <span class="opcion-spec">ATX — vidrio templado</span>
+              <span class="opcion-precio">$420.000</span>
+            </div>
+            <div class="opcion">
+              <span class="opcion-nombre">Fractal Design Torrent</span>
+              <span class="opcion-spec">E-ATX — alto flujo de aire</span>
+              <span class="opcion-precio">$780.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 8px; gap: 10px;">
+          <button class="btn btn-contorno">Limpiar seleccion</button>
+        </div>
+
+      </article>
+
+      <!-- Esto muestra lo que se va eligiendo -->
+      <aside>
+        <h3>Mi seleccion</h3>
+
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">CPU</div>
+            <div class="aside-valor" id="r-CPU">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">Motherboard</div>
+            <div class="aside-valor" id="r-Motherboard">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">RAM</div>
+            <div class="aside-valor" id="r-RAM">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">GPU</div>
+            <div class="aside-valor" id="r-GPU">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">Almacenamiento</div>
+            <div class="aside-valor" id="r-Almacenamiento">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">Fuente</div>
+            <div class="aside-valor" id="r-Fuente">Sin elegir</div>
+          </div>
+        </div>
+        <div class="aside-fila">
+          <div>
+            <div class="aside-label">Gabinete</div>
+            <div class="aside-valor" id="r-Gabinete">Sin elegir</div>
+          </div>
+        </div>
+
+        <div class="total">
+          <span class="total-label">Total</span>
+          <span class="total-monto" id="total">$0</span>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <div class="aside-label" style="margin-bottom: 4px;">Nivel estimado</div>
+          <div id="nivel" style="font-size: 0.9rem; color: var(--texto-suave);">—</div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>PC Builder</h4>
+        <p>Proyecto - Desarrollo Web</p>
+        <p>EAM Institucion Universitaria</p>
+      </div>
+      <div class="footer-col">
+        <h4>Paginas</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="builder.html">Armar PC</a>
+        <a href="guia.html">Guia de componentes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>castanedaloperaj@gmail.com</p>
+        <p>2026</p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>Proyecto - Desarrollo Web | EAM 2026</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

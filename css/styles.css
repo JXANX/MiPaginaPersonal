@@ -1,0 +1,508 @@
+/* 
+   Estilos de PC Builder
+   Hice este CSS para el proyecto de Desarrollo Web
+   Uso colores oscuros con tonos rojos pastel que me gustan
+   La fuente es Arial y todo el layout esta hecho con Flexbox
+*/
+
+/* Aqui defino los colores y variables que uso en todo el sitio */
+:root {
+  --fondo: #1a1218;
+  --superficie: #241c22;
+  --card: #2a2028;
+  --borde: #3d2e38;
+
+  --rojo: #d4736c;
+  --rojo-suave: #e8988f;
+  --cafe: #c49a8a;
+  --cafe-claro: #d4b5a0;
+  --crema: #2f2229;
+
+  --texto: #ede0dc;
+  --texto-suave: #b89a90;
+  --texto-mini: #8a706a;
+
+  --radio: 6px;
+  --gap: 20px;
+}
+
+/* Reset basico para que todo se vea igual en cualquier navegador */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* La barra de navegacion de arriba */
+header {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+/* Menu de navegacion */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border-radius: var(--radio);
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--crema);
+  color: var(--rojo);
+}
+
+/* El submenu que sale al pasar el mouse por encima de Guia */
+nav ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  min-width: 150px;
+  flex-direction: column;
+  padding: 6px 0;
+  z-index: 10;
+}
+
+nav ul li:hover .submenu {
+  display: flex;
+}
+
+nav ul li .submenu li a {
+  border-radius: 0;
+  font-size: 0.88rem;
+  padding: 7px 16px;
+}
+
+/* Contenido principal, lo centro y le pongo un ancho maximo */
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 40px;
+}
+
+/* Para poner dos columnas lado a lado (lo uso en el builder) */
+.layout-dos {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+
+.layout-dos article {
+  flex: 2;
+  min-width: 0;
+}
+
+.layout-dos aside {
+  flex: 1;
+  min-width: 240px;
+}
+
+/* Para poner todo en una sola columna (lo uso en la guia) */
+.layout-uno {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* Los titulos de cada seccion */
+.titulo-seccion {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--rojo-suave);
+  border-bottom: 1px solid var(--borde);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Mi perfil en la pagina de inicio */
+.perfil {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 32px;
+  margin-bottom: var(--gap);
+}
+
+.perfil-foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--borde);
+  background-color: var(--crema);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-mini);
+  font-size: 0.85rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.perfil-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perfil-nombre {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.perfil-titulo {
+  font-size: 1rem;
+  color: var(--rojo-suave);
+}
+
+.perfil-desc {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  max-width: 500px;
+}
+
+/* Las tarjetas que uso para mostrar info */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 20px;
+}
+
+.card-titulo {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--cafe);
+  margin-bottom: 8px;
+}
+
+/* Fila de tarjetas, se acomodan una al lado de otra */
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.cards-row .card {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Cada grupo de componentes en el builder */
+.grupo {
+  margin-bottom: 28px;
+}
+
+.grupo h3 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--cafe);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Las opciones de cada componente */
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.opcion {
+  flex: 1;
+  min-width: 170px;
+  max-width: 240px;
+  background-color: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.opcion:hover {
+  border-color: var(--rojo-suave);
+}
+
+.opcion.seleccionada {
+  border-color: var(--rojo);
+  background-color: var(--crema);
+}
+
+.opcion-nombre {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.opcion-spec {
+  font-size: 0.8rem;
+  color: var(--texto-mini);
+}
+
+.opcion-precio {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--rojo-suave);
+  margin-top: 6px;
+}
+
+/* La barra lateral donde se ve el resumen de lo elegido */
+aside {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 20px;
+}
+
+aside h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--cafe);
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--borde);
+  padding-bottom: 8px;
+}
+
+.aside-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--borde);
+  gap: 8px;
+}
+
+.aside-fila:last-of-type {
+  border-bottom: none;
+}
+
+.aside-label {
+  font-size: 0.78rem;
+  color: var(--texto-mini);
+  text-transform: uppercase;
+}
+
+.aside-valor {
+  font-size: 0.88rem;
+  color: var(--texto);
+  text-align: right;
+  flex: 1;
+}
+
+/* El total del precio */
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rojo-suave);
+}
+
+.total-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.total-monto {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+/* La barra de progreso del builder */
+.barra-fondo {
+  background-color: var(--borde);
+  border-radius: 10px;
+  height: 6px;
+  margin: 14px 0 6px;
+}
+
+.barra-relleno {
+  height: 6px;
+  border-radius: 10px;
+  background-color: var(--rojo-suave);
+}
+
+.barra-texto {
+  font-size: 0.78rem;
+  color: var(--texto-mini);
+  text-align: right;
+}
+
+/* Estilos de los botones */
+.btn {
+  display: inline-block;
+  padding: 9px 22px;
+  border-radius: var(--radio);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Boton rojo relleno */
+.btn-principal {
+  background-color: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo);
+}
+
+.btn-principal:hover {
+  background-color: var(--rojo-suave);
+  border-color: var(--rojo-suave);
+}
+
+/* Boton solo con borde */
+.btn-contorno {
+  background-color: transparent;
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+.btn-contorno:hover {
+  background-color: var(--crema);
+}
+
+/* Las tablas de la guia de componentes */
+.tabla-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead th {
+  background-color: var(--superficie);
+  color: var(--cafe);
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--borde);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--borde);
+}
+
+tbody td {
+  padding: 9px 14px;
+  color: var(--texto);
+}
+
+/* El pie de pagina */
+footer {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borde);
+  padding: 28px 40px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--cafe);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.footer-col a,
+.footer-col p {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--rojo);
+}
+
+.footer-base {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--borde);
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--texto-mini);
+}

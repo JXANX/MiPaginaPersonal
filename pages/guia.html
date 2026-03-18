@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia de componentes - PC Builder</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">PC Builder</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="builder.html">Armar PC</a></li>
+        <li>
+          <a href="guia.html" class="active">Guia</a>
+          <ul class="submenu">
+            <li><a href="#cpu">Procesadores</a></li>
+            <li><a href="#gpu">Tarjetas de video</a></li>
+            <li><a href="#ram">Memoria RAM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="layout-uno">
+
+      <section>
+        <h2 class="titulo-seccion">Guia de componentes</h2>
+        <p style="color: var(--texto-suave); font-size: 0.95rem;">
+          Aqui puedes conocer los componentes principales de una PC, que hace cada uno
+          y como influye en el rendimiento del equipo.
+        </p>
+      </section>
+
+      <!-- Seccion de procesadores -->
+      <section id="cpu">
+        <div class="card">
+          <h3 class="card-titulo">Procesador (CPU)</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem; margin-bottom: 14px;">
+            El CPU es el cerebro de la PC. Ejecuta todas las instrucciones de los programas.
+            Un CPU con mas nucleos y mayor frecuencia mejora el rendimiento en multitarea y videojuegos.
+          </p>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Nucleos / Hilos</th>
+                  <th>Frecuencia</th>
+                  <th>Socket</th>
+                  <th>Nivel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Intel Core i3-12100</td>
+                  <td>4 / 8</td>
+                  <td>3.3 – 4.3 GHz</td>
+                  <td>LGA1700</td>
+                  <td>Basico</td>
+                </tr>
+                <tr>
+                  <td>Intel Core i5-13600K</td>
+                  <td>14 / 20</td>
+                  <td>3.5 – 5.1 GHz</td>
+                  <td>LGA1700</td>
+                  <td>Gamer</td>
+                </tr>
+                <tr>
+                  <td>AMD Ryzen 9 7900X</td>
+                  <td>12 / 24</td>
+                  <td>4.7 – 5.6 GHz</td>
+                  <td>AM5</td>
+                  <td>Profesional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion de tarjetas de video -->
+      <section id="gpu">
+        <div class="card">
+          <h3 class="card-titulo">Tarjeta de video (GPU)</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem; margin-bottom: 14px;">
+            La GPU procesa imagenes y graficos. Es la pieza mas importante para juegos,
+            edicion de video y diseno 3D.
+          </p>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>VRAM</th>
+                  <th>Tipo</th>
+                  <th>Nivel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Intel UHD 730</td>
+                  <td>Compartida</td>
+                  <td>Integrada</td>
+                  <td>Basico</td>
+                </tr>
+                <tr>
+                  <td>NVIDIA RTX 3060</td>
+                  <td>12 GB GDDR6</td>
+                  <td>Dedicada</td>
+                  <td>Gamer</td>
+                </tr>
+                <tr>
+                  <td>NVIDIA RTX 4080</td>
+                  <td>16 GB GDDR6X</td>
+                  <td>Dedicada</td>
+                  <td>Profesional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion de memoria RAM -->
+      <section id="ram">
+        <div class="card">
+          <h3 class="card-titulo">Memoria RAM</h3>
+          <p style="color: var(--texto-suave); font-size: 0.88rem; margin-bottom: 14px;">
+            La RAM almacena temporalmente los datos que el CPU necesita de forma rapida.
+            Para gaming, 16 GB es el estandar actual.
+          </p>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Capacidad</th>
+                  <th>Velocidad</th>
+                  <th>Tipo</th>
+                  <th>Nivel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kingston ValueRAM</td>
+                  <td>8 GB</td>
+                  <td>3200 MHz</td>
+                  <td>DDR4</td>
+                  <td>Basico</td>
+                </tr>
+                <tr>
+                  <td>Corsair Vengeance</td>
+                  <td>16 GB (2x8)</td>
+                  <td>3600 MHz</td>
+                  <td>DDR4</td>
+                  <td>Gamer</td>
+                </tr>
+                <tr>
+                  <td>G.Skill Trident Z5</td>
+                  <td>32 GB (2x16)</td>
+                  <td>5600 MHz</td>
+                  <td>DDR5</td>
+                  <td>Profesional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Los demas componentes que tambien importan -->
+      <section>
+        <div class="card">
+          <h3 class="card-titulo">Otros componentes</h3>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Componente</th>
+                  <th>Que hace</th>
+                  <th>Recomendacion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Motherboard</td>
+                  <td>Conecta todos los componentes entre si.</td>
+                  <td>Debe ser compatible con el socket del CPU.</td>
+                </tr>
+                <tr>
+                  <td>Almacenamiento (SSD)</td>
+                  <td>Guarda el sistema operativo, juegos y archivos.</td>
+                  <td>Un NVMe SSD mejora los tiempos de carga.</td>
+                </tr>
+                <tr>
+                  <td>Fuente de poder (PSU)</td>
+                  <td>Suministra energia a todos los componentes.</td>
+                  <td>Elegir mas vatios de los necesarios da margen.</td>
+                </tr>
+                <tr>
+                  <td>Gabinete</td>
+                  <td>Aloja y protege todos los componentes.</td>
+                  <td>Un buen flujo de aire mantiene bajas temperaturas.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <div>
+        <a href="builder.html" class="btn btn-principal">Ir a armar mi PC</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>PC Builder</h4>
+        <p>Proyecto - Desarrollo Web</p>
+        <p>EAM Institucion Universitaria</p>
+      </div>
+      <div class="footer-col">
+        <h4>Paginas</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="builder.html">Armar PC</a>
+        <a href="guia.html">Guia de componentes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>castanedaloperaj@gmail.com</p>
+        <p>2026</p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>Proyecto - Desarrollo Web | EAM 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
